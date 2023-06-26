@@ -127,8 +127,8 @@ def addbook():
 def downcsv():
     return send_file(BOOK_LIST,
                      mimetype='text/csv',
-                     attachment_filename='download_booklist.csv',
-                     as_attachment=True, cache_timeout=-1)
+                     download_name='download_booklist.csv',
+                     as_attachment=True)
     
 @bk.route("/reset")
 @login_required
